@@ -39,6 +39,10 @@ This is an example of a <language> "Product" API Provider that uses <tool>, Pact
 
 It performs pre-deployment cross-compatability checks to ensure that it is compatible with specified consumers using the Bi-Directional contract capability of Pactflow.
 
+<!-- General -->
+
+See the full [Pactflow CI/CD Workshop](https://docs.pactflow.io/docs/workshops/ci-cd) for which this can be substituted in as the "consumer".
+
 ### Key points with <Tool>
 
 It:

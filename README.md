@@ -27,9 +27,13 @@
 
 <!-- Consumer Overview -->
 
-This is an example of a <language> "Product" API consumer that uses <tool>, Pact, [Pactflow](https://pactflow.io) and GitHub Actions to generate and publish Pact consumer contracts.
+This is an example of a NodeJS/React "Product" API consumer that uses Nock, Pact, [Pactflow](https://pactflow.io) and GitHub Actions to generate and publish Pact consumer contracts.
 
 It performs pre-deployment cross-compatibility checks to ensure that it is compatible with specified providers using the Bi-Directional contract capability of Pactflow.
+
+<!-- General -->
+
+See the full [Pactflow CI/CD Workshop](https://docs.pactflow.io/docs/workshops/ci-cd) for which this can be substituted in as the "consumer".
 
 ## Overview of Part of Bi-Directional Contract Testing Flow
 
@@ -49,7 +53,7 @@ When you run the CI pipeline (see below for doing this), the pipeline should per
   * Run tests (including the pact tests that generate the contract)
   * Publish pacts, tagging the consumer version with the name of the current branch
   * Check if we are safe to deploy to Production with `can-i-deploy` (ie. has the cross-contract validation has been successfully performed)
-* Deploy (only from <main|master>)
+* Deploy (only from master)
   * Deploy app to Production
   * Record the Production deployment in the Pact Broker
 
