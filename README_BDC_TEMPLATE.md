@@ -10,7 +10,7 @@
 
 - [Example <Language> <Tool> <Consumer|Provider>](#example-language-tool-consumerprovider)
   - [Overview of Example](#overview-of-example)
-    - [Key points with <Tool>](#key-points-with-tool)
+    - [Key points](#key-points)
   - [Overview of Part of <BDCT/CDCT> Flow](#overview-of-part-of-bdctcdct-flow)
   - [Compatibile with <Consumers|Providers>](#compatibile-with-consumersproviders)
   - [Pre-requisites](#pre-requisites)
@@ -41,9 +41,10 @@ It performs pre-deployment cross-compatability checks to ensure that it is compa
 
 <!-- General -->
 
-See the full [Pactflow CI/CD Workshop](https://docs.pactflow.io/docs/workshops/ci-cd) for which this can be substituted in as the "consumer".
+See the full [Pactflow Bi-Directional Workshop](https://docs.pactflow.io/docs/workshops/bi-directional-contract-testing) for which this can be substituted in as the <consumer|provider>".
 
-### Key points with <Tool>
+
+### Key points
 
 It:
 
@@ -110,8 +111,11 @@ When you run the CI pipeline (see below for doing this), the pipeline should per
 
 This project is currently compatible with the following consumers(s):
 
-* x
-* y
+* [pactflow-example-bi-directional-consumer-nock](https://github.com/pactflow/example-bi-directional-consumer-nock)
+* [pactflow-example-bi-directional-consumer-msw](https://github.com/pactflow/example-bi-directional-consumer-msw)
+* [pactflow-example-bi-directional-consumer-wiremock](https://github.com/pactflow/example-bi-directional-consumer-wiremock)
+* [pactflow-example-bi-directional-consumer-mountebank](https://github.com/pactflow/example-bi-directional-consumer-mountebank)
+<!-- * [pactflow-example-bi-directional-consumer-dotnet](https://github.com/pactflow/example-bi-directional-consumer-dotnet) -->
 
 See [Environment variables](#environment-variables) on how to set these up
   
@@ -120,9 +124,10 @@ See [Environment variables](#environment-variables) on how to set these up
 
 This project is currently compatible with the following provider(s):
 
-* [pactflow-example-provider-dredd](https://github.com/pactflow/example-provider-dredd)
-* [pactflow-example-provider-restassured](https://github.com/pactflow/example-provider-restassured)
-* [pactflow-example-provider-postman](https://github.com/pactflow/example-provider-postman)
+* [pactflow-example-bi-directional-provider-dredd](https://github.com/pactflow/example-bi-directional-provider-dredd)
+* [pactflow-example-bi-directional-provider-restassured](https://github.com/pactflow/example-provider-restassured)
+* [pactflow-example-bi-directional-provider-postman](https://github.com/pactflow/example-bi-directional-provider-postman)
+* [pactflow-example-bi-directional-provider-dotnet](https://github.com/pactflow/example-bi-directional-provider-dotnet)
 
 See [Environment variables](#environment-variables) on how to set these up.
   
@@ -144,10 +149,10 @@ To be able to run some of the commands locally, you will need to export the foll
 
 Set `PACT_PROVIDER` to one of the following
 
-- `PACT_PROVIDER=pactflow-example-provider-dredd`: Dredd - (https://github.com/pactflow/example-provider-dredd)
-- `PACT_PROVIDER=pactflow-example-provider-postman`: Postman - (https://github.com/pactflow/example-provider-postman)
-- `PACT_PROVIDER=pactflow-example-provider-restassured`:  Rest Assured - (https://github.com/pactflow/example-provider-restassured)
-
+- `PACT_PROVIDER=pactflow-example-bi-directional-provider-dredd`: Dredd - (https://github.com/pactflow/example-bi-directional-provider-dredd)
+- `PACT_PROVIDER=pactflow-example-bi-directional-provider-postman`: Postman - (https://github.com/pactflow/example-bi-directional-provider-postman)
+- `PACT_PROVIDER=pactflow-example-bi-directional-provider-restassured`:  Rest Assured - (https://github.com/pactflow/example-bi-directional-provider-restassured)
+  
 ## Usage
 
 ### Steps
@@ -230,4 +235,4 @@ You can still try this example locally on Windows using powershell and running c
 
 ## Found an issue?
 
-Reach out via a GitHub Issue, or reach us over in the [Pact foundation Slack](pact.slack.io)
+Reach out via a GitHub Issue, or reach us over in the [Pact foundation Slack](https://slack.pact.io)
