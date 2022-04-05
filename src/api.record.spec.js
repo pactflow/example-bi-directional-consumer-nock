@@ -32,7 +32,7 @@ export const convertNockToPact = () => {
   ));
 
   const pact = {
-    consumer: { name: "pactflow-example-consumer-nock" },
+    consumer: { name: "pactflow-example-bi-directional-consumer-nock" },
     provider: {
       name: process.env.PACT_PROVIDER
         ? process.env.PACT_PROVIDER
