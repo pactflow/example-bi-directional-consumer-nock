@@ -36,7 +36,7 @@ export const convertNockToPact = () => {
     provider: {
       name: process.env.PACT_PROVIDER
         ? process.env.PACT_PROVIDER
-        : "pactflow-example-provider-dredd",
+        : "pactflow-example-bi-directional-provider-dredd",
     },
     interactions: [],
     metadata: {
