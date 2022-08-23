@@ -6,6 +6,7 @@ const nockBack = require("nock").back;
 nockBack.setMode("record"); // record interactions
 nockBack.fixtures = "fixtures"; // fixture files will be stored in ./fixtures/<fixture>.json
 const filename = "nock.json";
+const pjson = require("../package.json")
 
 describe("API Nock Tests", () => {
   test("nock recordings", () => {
@@ -42,6 +43,10 @@ export const convertNockToPact = () => {
     metadata: {
       pactSpecification: {
         version: "2.0.0",
+      },
+      client: {
+        name: "pact-nock-adapter",
+        version: pjson.version,
       },
     },
   };
