@@ -29,19 +29,19 @@
 
 <!-- Consumer Overview -->
 
-This is an example of a <language> "Product" API consumer that uses <tool>, Pact, [Pactflow](https://pactflow.io) and GitHub Actions to generate and publish Pact consumer contracts.
+This is an example of a <language> "Product" API consumer that uses <tool>, Pact, [PactFlow](https://pactflow.io) and GitHub Actions to generate and publish Pact consumer contracts.
 
-It performs pre-deployment cross-compatibility checks to ensure that it is compatible with specified providers using the Bi-Directional contract capability of Pactflow.
+It performs pre-deployment cross-compatibility checks to ensure that it is compatible with specified providers using the Bi-Directional contract capability of PactFlow.
 
 <!-- Provider Overview -->
 
-This is an example of a <language> "Product" API Provider that uses <tool>, Pact, [Pactflow](https://pactflow.io) and GitHub Actions to generate and publish Pact provider contracts.
+This is an example of a <language> "Product" API Provider that uses <tool>, Pact, [PactFlow](https://pactflow.io) and GitHub Actions to generate and publish Pact provider contracts.
 
-It performs pre-deployment cross-compatability checks to ensure that it is compatible with specified consumers using the Bi-Directional contract capability of Pactflow.
+It performs pre-deployment cross-compatability checks to ensure that it is compatible with specified consumers using the Bi-Directional contract capability of PactFlow.
 
 <!-- General -->
 
-See the full [Pactflow Bi-Directional Workshop](https://docs.pactflow.io/docs/workshops/bi-directional-contract-testing) for which this can be substituted in as the <consumer|provider>".
+See the full [PactFlow Bi-Directional Workshop](https://docs.pactflow.io/docs/workshops/bi-directional-contract-testing) for which this can be substituted in as the <consumer|provider>".
 
 
 ### Key points
@@ -52,7 +52,7 @@ It:
 - y
 - z
 
-What is uploaded to Pactflow is an OpenAPI specification that represents what you actually tested with <tool>, to give us confidence it is compatible with a Pact consumer.
+What is uploaded to PactFlow is an OpenAPI specification that represents what you actually tested with <tool>, to give us confidence it is compatible with a Pact consumer.
 
 ## Overview of Part of <BDCT/CDCT> Flow
 
@@ -61,7 +61,7 @@ What is uploaded to Pactflow is an OpenAPI specification that represents what yo
 
 In the following diagram, You can see how the consumer testing process works - it's the same as the current Pact process.
 
-When we call "can-i-deploy" the cross-contract validation process kicks off on Pactflow, to ensure any consumer consumes a valid subset of the OAS for the provider.
+When we call "can-i-deploy" the cross-contract validation process kicks off on PactFlow, to ensure any consumer consumes a valid subset of the OAS for the provider.
 
 ![Consumer Test](docs/consumer-scope.png "Consumer Test")
 
@@ -84,7 +84,7 @@ When you run the CI pipeline (see below for doing this), the pipeline should per
 
 In the following diagram, you can see how the provider testing process works.
 
-When we call "can-i-deploy" the cross-contract validation process kicks off on Pactflow, to ensure any consumer consumes a valid subset of the OAS for the provider.
+When we call "can-i-deploy" the cross-contract validation process kicks off on PactFlow, to ensure any consumer consumes a valid subset of the OAS for the provider.
 
 ![Provider Test](docs/provider-scope.png "Provider Test")
 
@@ -142,7 +142,7 @@ See [Environment variables](#environment-variables) on how to set these up.
 
 To be able to run some of the commands locally, you will need to export the following environment variables into your shell:
 
-- `PACT_BROKER_TOKEN`: a valid [API token](https://docs.pactflow.io/docs/getting-started/#configuring-your-api-token) for Pactflow
+- `PACT_BROKER_TOKEN`: a valid [API token](https://docs.pactflow.io/docs/getting-started/#configuring-your-api-token) for PactFlow
 - `PACT_BROKER_BASE_URL`: a fully qualified domain name with protocol to your pact broker e.g. https://testdemo.pactflow.io
 
 <!-- CONSUMER env vars -->
@@ -195,7 +195,7 @@ You can still try this example locally on Windows using powershell and running c
       
       becomes
       
-      `/c/Users/Candy/Documents/Pactflow/example-bi-directional-consumer-dotnet`
+      `/c/Users/Candy/Documents/PactFlow/example-bi-directional-consumer-dotnet`
 
       $env:VARIABLE_NAME refers to the environment variables in windows.
 
