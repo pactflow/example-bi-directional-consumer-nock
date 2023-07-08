@@ -9,9 +9,9 @@
     "react-dom": "16.12.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3",
+    "react-scripts": "^5.0.1",
     "spectre.css": "^0.5.9",
-    "swagger-mock-validator": "^10.0.0"
+    "swagger-mock-validator": "^10.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,7 +37,7 @@
     ]
   },
   "devDependencies": {
-    "@pact-foundation/pact": "^9.17.2",
+    "@pact-foundation/pact": "^9.18.1",
     "@pact-foundation/pact-node": "^10.17.1",
     "@testing-library/jest-dom": "4.2.4",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
