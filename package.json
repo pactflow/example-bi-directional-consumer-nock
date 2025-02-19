@@ -37,21 +37,21 @@
     ]
   },
   "devDependencies": {
-    "@pact-foundation/pact": "^9.17.2",
-    "@pact-foundation/pact-node": "^10.17.1",
+    "@pact-foundation/pact": "9.17.2",
+    "@pact-foundation/pact-node": "10.17.1",
     "@testing-library/jest-dom": "4.2.4",
-    "@typescript-eslint/eslint-plugin": "^2.34.0",
-    "@typescript-eslint/parser": "^2.34.0",
-    "babel-eslint": "^10.1.0",
-    "cross-env": "^7.0.3",
-    "dotenv": "^8.2.0",
-    "eslint": "^6.8.0",
-    "eslint-config-react-app": "^5.2.1",
-    "eslint-plugin-flowtype": "^3.13.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.21.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "nock": "^11.9.1"
+    "@typescript-eslint/eslint-plugin": "2.34.0",
+    "@typescript-eslint/parser": "2.34.0",
+    "babel-eslint": "10.1.0",
+    "cross-env": "7.0.3",
+    "dotenv": "8.2.0",
+    "eslint": "6.8.0",
+    "eslint-config-react-app": "5.2.1",
+    "eslint-plugin-flowtype": "3.13.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-react": "7.21.3",
+    "eslint-plugin-react-hooks": "1.7.0",
+    "nock": "11.9.1"
   }
 }
