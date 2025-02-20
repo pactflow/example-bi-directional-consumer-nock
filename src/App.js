@@ -5,7 +5,6 @@ import 'spectre.css/dist/spectre-icons.min.css';
 import 'spectre.css/dist/spectre-exp.min.css';
 import Heading from "./Heading";
 import Layout from "./Layout";
-import {withRouter} from "react-router-dom";
 import API from "./api";
 import PropTypes from 'prop-types';
 
@@ -140,4 +139,4 @@ App.propTypes = {
   ).isRequired
 };
 
-export default withRouter(App);
+export default App;
