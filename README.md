@@ -66,7 +66,7 @@ This project is currently compatible with the following provider(s):
 
 * [pactflow-example-bi-directional-provider-dredd](https://github.com/pactflow/example-bi-directional-provider-dredd)
 * [pactflow-example-bi-directional-provider-restassured](https://github.com/pactflow/example-provider-restassured)
-* [pactflow-example-bi-directional-provider-postman](https://github.com/pactflow/example-bi-directional-provider-postman)
+<!-- * [pactflow-example-bi-directional-provider-postman](https://github.com/pactflow/example-bi-directional-provider-postman) -->
 
 See [Environment variables](#environment-variables) on how to set these up.
   
@@ -88,7 +88,7 @@ To be able to run some of the commands locally, you will need to export the foll
 Set `PACT_PROVIDER` to one of the following
 
 - `PACT_PROVIDER=pactflow-example-bi-directional-provider-dredd`: Dredd - (https://github.com/pactflow/example-bi-directional-provider-dredd)
-- `PACT_PROVIDER=pactflow-example-bi-directional-provider-postman`: Postman - (https://github.com/pactflow/example-bi-directional-provider-postman)
+<!-- - `PACT_PROVIDER=pactflow-example-bi-directional-provider-postman`: Postman - (https://github.com/pactflow/example-bi-directional-provider-postman) -->
 - `PACT_PROVIDER=pactflow-example-bi-directional-provider-restassured`:  Rest Assured - (https://github.com/pactflow/example-bi-directional-provider-restassured)
 
 

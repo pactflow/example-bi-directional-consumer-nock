@@ -19,8 +19,7 @@ jobs:
         pact_provider:
           [
             "pactflow-example-bi-directional-provider-dredd",
-            "pactflow-example-bi-directional-provider-restassured",
-            "pactflow-example-bi-directional-provider-postman"
+            "pactflow-example-bi-directional-provider-restassured"
           ]
     steps:
       - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
