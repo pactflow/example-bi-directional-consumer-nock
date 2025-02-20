@@ -16,10 +16,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env CI=true react-scripts test",
+    "test": "cross-env CI=true react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-scripts eject",
-    "test:nock": "cross-env CI=true react-scripts test --testTimeout 30000 nock.spec.js",
-    "test:record": "cross-env CI=true react-scripts test --testTimeout 30000 record.spec.js"
+    "test:nock": "cross-env CI=true react-scripts test --testTimeout 30000 nock.spec.js --transformIgnorePatterns \"node_modules/(?!axios)/\"",
+    "test:record": "cross-env CI=true react-scripts test --testTimeout 30000 record.spec.js --transformIgnorePatterns \"node_modules/(?!axios)/\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,6 +43,6 @@
     "dotenv": "16.4.7",
     "eslint": "6.8.0",
     "eslint-plugin-react": "7.37.4",
-    "nock": "14.0.1"
+    "nock": "13.5.6"
   }
 }
