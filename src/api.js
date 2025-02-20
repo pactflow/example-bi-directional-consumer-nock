@@ -1,9 +1,6 @@
 import axios from 'axios';
-import adapter from "axios/lib/adapters/http";
 import { Product } from './product';
-
-axios.defaults.adapter = adapter;
-
+axios.defaults.adapter = 'http';
 export class API {
   constructor(url) {
     if (url === undefined || url === "") {
