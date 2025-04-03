@@ -37,7 +37,7 @@
     ]
   },
   "devDependencies": {
-    "@pact-foundation/pact": "14.0.0",
+    "@pact-foundation/pact": "15.0.1",
     "@testing-library/jest-dom": "6.6.3",
     "cross-env": "7.0.3",
     "dotenv": "16.4.7",
