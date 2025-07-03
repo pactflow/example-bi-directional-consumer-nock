@@ -41,7 +41,7 @@
     "@testing-library/jest-dom": "6.6.3",
     "cross-env": "7.0.3",
     "dotenv": "16.6.1",
-    "eslint": "9.29.0",
+    "eslint": "9.30.1",
     "eslint-plugin-react": "7.37.5",
     "nock": "13.5.6"
   }
