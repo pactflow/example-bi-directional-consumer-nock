@@ -39,7 +39,7 @@
   "devDependencies": {
     "@pact-foundation/pact": "15.0.1",
     "@testing-library/jest-dom": "6.6.3",
-    "cross-env": "7.0.3",
+    "cross-env": "10.0.0",
     "dotenv": "17.2.1",
     "eslint": "9.32.0",
     "eslint-plugin-react": "7.37.5",
