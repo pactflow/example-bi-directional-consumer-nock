@@ -16,10 +16,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env CI=true react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
+    "test": "vitest run",
     "eject": "react-scripts eject",
-    "test:nock": "cross-env CI=true react-scripts test --testTimeout 30000 nock.spec.js --transformIgnorePatterns \"node_modules/(?!axios)/\"",
-    "test:record": "cross-env CI=true react-scripts test --testTimeout 30000 record.spec.js --transformIgnorePatterns \"node_modules/(?!axios)/\""
+    "test:nock": "vitest run src/api.nock.spec.js",
+    "test:record": "vitest run src/api.record.spec.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,11 +38,10 @@
   },
   "devDependencies": {
     "@pact-foundation/pact": "17.1.4",
-    "@testing-library/jest-dom": "7.0.1",
-    "cross-env": "10.1.0",
     "dotenv": "18.0.8",
     "eslint": "9.39.5",
     "eslint-plugin-react": "7.37.5",
-    "nock": "13.5.6"
+    "nock": "13.5.6",
+    "vitest": "5.0.5"
   }
 }
