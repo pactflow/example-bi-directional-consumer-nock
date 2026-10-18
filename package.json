@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "axios": "^1.20.0",
-    "prop-types": "15.8.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-router": "^8.4.0",
@@ -15,14 +14,19 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:nock": "vitest run src/api.nock.spec.js",
-    "test:record": "vitest run src/api.record.spec.js"
+    "test:nock": "vitest run src/api.nock.spec.ts",
+    "test:record": "vitest run src/api.record.spec.ts",
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.1.2",
     "eslint": "9.39.5",
     "eslint-plugin-react": "7.37.5",
     "nock": "15.0.2",
+    "typescript": "7.0.2",
     "vite": "8.3.4",
     "vitest": "5.0.5"
   }
