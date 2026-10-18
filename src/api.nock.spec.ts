@@ -1,10 +1,10 @@
 import nock from "nock";
 import { Api } from "./api.ts";
-import { convertNockToPact } from "./api.record.spec.ts";
+import { convertNockToPact, fixtureFile, fixturesDir } from "./nockToPact.ts";
 
 const nockBack = nock.back;
 nockBack.setMode("lockdown"); // don't allow new recording!
-nockBack.fixtures = "fixtures";
+nockBack.fixtures = fixturesDir;
 
 describe("API Nock Tests", () => {
   // convert the fixture file into a pact contract after testing
@@ -12,7 +12,7 @@ describe("API Nock Tests", () => {
 
   test("nock replay tests", async () => {
     // reuse the nock fixture
-    const { nockDone, context } = await nockBack("nock.json");
+    const { nockDone, context } = await nockBack(fixtureFile);
     const api = new Api("http://localhost:3001");
 
     // Test 1
