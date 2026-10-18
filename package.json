@@ -2,6 +2,10 @@
   "name": "consumer",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "dependencies": {
     "axios": "^1.20.0",
     "react": "^19.3.1",
