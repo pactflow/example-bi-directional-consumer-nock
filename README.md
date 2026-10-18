@@ -16,6 +16,7 @@
     - [Environment variables](#environment-variables)
   - [Usage](#usage)
     - [Steps](#steps)
+    - [Development](#development)
   - [OS/Platform specific considerations](#osplatform-specific-considerations)
     - [Windows](#windows)
   - [Caveats](#caveats)
@@ -76,6 +77,7 @@ See [Environment variables](#environment-variables) on how to set these up.
 **Software**:
 
 - Tools listed at: https://docs.pactflow.io/docs/workshops/ci-cd/set-up-ci/prerequisites/
+- [Node.js](https://nodejs.org) 24 or later
 - A pactflow.io account with an valid [API token](https://docs.pactflow.io/docs/getting-started/#configuring-your-api-token)
 
 ### Environment variables
@@ -90,6 +92,8 @@ Set `PACT_PROVIDER` to one of the following
 - `PACT_PROVIDER=pactflow-example-bi-directional-provider-dredd`: Dredd - (https://github.com/pactflow/example-bi-directional-provider-dredd)
 <!-- - `PACT_PROVIDER=pactflow-example-bi-directional-provider-postman`: Postman - (https://github.com/pactflow/example-bi-directional-provider-postman) -->
 - `PACT_PROVIDER=pactflow-example-bi-directional-provider-restassured`:  Rest Assured - (https://github.com/pactflow/example-bi-directional-provider-restassured)
+
+The React app reads the provider's address from `VITE_API_BASE_URL`, defaulting to `http://localhost:3001`. Copy `.env.example` to `.env` to override it for `npm run dev`. The nock tests ignore it and always target `http://localhost:3001`, the address recorded in the fixture.
 
 
 ## Usage
@@ -110,7 +114,24 @@ For the default [Provider](https://github.com/pactflow/example-provider-dredd) d
 
 * `npm run test:record` - this will run nock in record mode, and your api client will issue real requests to the API 
 * `npm run test:nock` - run the nock tests in replay only mode, validating all stubs were used in the process, and writing a pact file if successful
-  
+
+### Development
+
+The consumer is a React app written in TypeScript. [Vite](https://vite.dev) builds it, [Vitest](https://vitest.dev) runs the nock tests, and [Biome](https://biomejs.dev) lints and formats the code.
+
+Run `npm ci` to install dependencies, then:
+
+| Script | Purpose |
+| --- | --- |
+| `npm run dev` | Start the app on http://localhost:3000 |
+| `npm run build` | Bundle the app into `build/` |
+| `npm test` | Run every spec, including the record spec |
+| `npm run type-check` | Type-check with `tsc` |
+| `npm run check` | Lint and check formatting with Biome |
+| `npm run check:fix` | Apply Biome's lint and formatting fixes |
+
+CI runs `type-check`, `check` and `build`, then `make test` for each provider.
+
 ## OS/Platform specific considerations
 
 The makefile is configured to run on Unix based systems such as you would find in most common CI/CD pipelines. 
