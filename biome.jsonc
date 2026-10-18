@@ -1,0 +1,67 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
+  "assist": { "actions": { "recommended": true } },
+  "formatter": { "useEditorconfig": true },
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "linter": {
+    // `preset: "all"` also enables rules written for other frameworks. Solid's
+    // noReactSpecificProps, for one, rewrites `className` to `class`, which
+    // breaks React. Switch off every framework this project does not use.
+    "domains": {
+      "astro": "none",
+      "drizzle": "none",
+      "next": "none",
+      "playwright": "none",
+      "qwik": "none",
+      "reactNative": "none",
+      "solid": "none",
+      "svelte": "none",
+      "tailwind": "none",
+      "turborepo": "none",
+      "vue": "none"
+    },
+    "rules": {
+      "preset": "all",
+      "style": {
+        // A ternary is the idiomatic way to pick between two JSX branches.
+        "noTernary": "off"
+      }
+    }
+  },
+  "javascript": {
+    // vitest's `globals: true` supplies these; TypeScript sees them through
+    // tsconfig's `types` array, which Biome's linter cannot read.
+    "globals": ["describe", "test", "expect", "afterAll"]
+  },
+  "overrides": [
+    {
+      // Vite and Vitest require a default export from their config files.
+      "includes": ["**/*.config.ts"],
+      "linter": {
+        "rules": {
+          "style": { "noDefaultExport": "off" }
+        }
+      }
+    },
+    {
+      // Text in components is intentional; this example is not internationalised.
+      "includes": ["**/*.tsx"],
+      "linter": {
+        "rules": {
+          "style": { "noJsxLiterals": "off" }
+        }
+      }
+    },
+    {
+      // The specs and the pact converter run under Node: they read the nock
+      // fixture, write the pact file, and take PACT_PROVIDER from the CI matrix.
+      "includes": ["**/*.spec.ts", "src/nockToPact.ts"],
+      "linter": {
+        "rules": {
+          "correctness": { "noNodejsModules": "off" },
+          "style": { "noProcessEnv": "off" }
+        }
+      }
+    }
+  ]
+}
