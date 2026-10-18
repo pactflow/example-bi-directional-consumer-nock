@@ -32,7 +32,7 @@ fake_ci: .env
 	@CI=true \
 	GIT_COMMIT=`git rev-parse --short HEAD`+`date +%s` \
 	GIT_BRANCH=`git rev-parse --abbrev-ref HEAD` \
-	REACT_APP_API_BASE_URL=http://localhost:8080 \
+	VITE_API_BASE_URL=http://localhost:8080 \
 	make ci
 
 publish_pacts: .env

@@ -8,36 +8,22 @@
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-router": "^8.4.0",
-    "react-scripts": "5.0.1",
     "spectre.css": "^0.5.9"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "vitest run",
-    "eject": "react-scripts eject",
     "test:nock": "vitest run src/api.nock.spec.js",
     "test:record": "vitest run src/api.record.spec.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
+    "@vitejs/plugin-react": "6.1.2",
     "eslint": "9.39.5",
     "eslint-plugin-react": "7.37.5",
     "nock": "15.0.2",
+    "vite": "8.3.4",
     "vitest": "5.0.5"
   }
 }
